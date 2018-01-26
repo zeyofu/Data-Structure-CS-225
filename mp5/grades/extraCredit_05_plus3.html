@@ -1,0 +1,378 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grade Feedback</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <style>
+    .pl-external-grader-results .panel-heading {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .pl-external-grader-results .panel-heading .panel-heading-left {
+      flex: 1;
+      align-self: left;
+    }
+
+    .pl-external-grader-results .panel-heading .panel-heading-right {
+      align-self: right;
+    }
+
+    .pl-external-grader-results .panel-heading .panel-heading-right .glyphicon.glyphicon-chevron-down {
+      transition: all 400ms;
+    }
+
+    .pl-external-grader-results .panel-heading:not(.collapsed) .panel-heading-right .glyphicon.glyphicon-chevron-down {
+      transform: rotateX(180deg);
+    }
+
+    .pl-external-grader-results pre.terminal-output {
+      background: black;
+      white-space: pre-wrap;
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-height: 200px;
+    }
+
+    .pl-external-grader-results pre.terminal-output > code {
+      color: white;
+      font-family: monospace;
+    }
+
+    .pl-external-grader-results pre.terminal-output.termial-output-question-panel {
+      margin: 0px;
+      border-radius: 0px;
+    }  
+    </style>
+
+
+
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="pl-external-grader-results">
+
+
+          <h3>Score:
+            <span style="color: hsla(211, 58%, 26%, 1)">
+              <strong>13/13 (100.00%)</strong>
+            </span>
+          </h3>
+
+          <h3>Test Results</h3>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-0" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[0/0]</strong></span>
+                      <span style="margin-left: 5px;">Output from &#x60;make&#x60;</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-0" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 0</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 0</li>
+                      <li class="list-group-item">
+                        <div><strong>Output</strong></div>
+                        <pre style="background: black; white-space: pre-wrap; overflow-y: auto; overflow-x: hidden; max-height: 200px;"><code style="color: white; font-family: monospace;">clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -MMD -MP -msse2 -c -O0 maptiles.cpp -o .objs/student/maptiles.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -MMD -MP -msse2 -c -O2 util/util.cpp -o .objs/provided/util/util.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -MMD -MP -msse2 -c -O2 mosaiccanvas.cpp -o .objs/provided/mosaiccanvas.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -MMD -MP -msse2 -c -O2 sourceimage.cpp -o .objs/provided/sourceimage.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -MMD -MP -msse2 -c -O2 util/coloredout.cpp -o .objs/provided/util/coloredout.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -MMD -MP -msse2 -c -O2 tileimage.cpp -o .objs/provided/tileimage.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -MMD -MP -msse2 -c -O2 cs225/HSLAPixel.cpp -o .objs/provided/cs225/HSLAPixel.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -MMD -MP -msse2 -c -O2 cs225/PNG.cpp -o .objs/provided/cs225/PNG.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -MMD -MP -msse2 -c -O2 cs225/lodepng/lodepng.cpp -o .objs/provided/cs225/lodepng/lodepng.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -MMD -MP -msse2 -c -O2 tests/tests_part1.cpp -o .objs/provided/tests/tests_part1.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -MMD -MP -msse2 -c -O2 tests/testmain.cpp -o .objs/provided/tests/testmain.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -MMD -MP -msse2 -c -O2 tests/tests_part2.cpp -o .objs/provided/tests/tests_part2.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -MMD -MP -msse2 -c -O2 tests/tests_part1_extra.cpp -o .objs/provided/tests/tests_part1_extra.o
+clang++ .objs/student/maptiles.o .objs/provided/util/util.o .objs/provided/mosaiccanvas.o .objs/provided/sourceimage.o .objs/provided/util/coloredout.o .objs/provided/tileimage.o .objs/provided/cs225/HSLAPixel.o .objs/provided/cs225/PNG.o .objs/provided/cs225/lodepng/lodepng.o .objs/provided/tests/tests_part1.o .objs/provided/tests/testmain.o .objs/provided/tests/tests_part2.o .objs/provided/tests/tests_part1_extra.o -std&#x3D;c++1y -stdlib&#x3D;libc++ -lc++abi -lpthread -o test
+</code></pre>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-1" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">KDTree::testSmallerDimVal Tests</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-1" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-2" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">KDTree::shouldReplace Tests</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-2" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-3" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">KDTree constructor, 1D (Dim&#x3D;1)</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-3" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-4" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">KDTree constructor, 3D (Dim &#x3D; 3)</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-4" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-5" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">KDTree::findNearestNeighbor, exact match, 1D (Dim&#x3D;1)</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-5" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-6" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">KDTree::findNearestNeighbor, exact match, 3D (Dim&#x3D;3)</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-6" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-7" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">KDTree::findNearestNeighbor (2D), returns correct result</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-7" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-8" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">KDTree::findNearestNeighbor (2D), testing correct path</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-8" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-9" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">KDTree::findNearestNeighbor (2D), testing correct path with fence jumping</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-9" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-10" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">KDTree::findNearestNeighbor (3D), testing tie-breaking</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-10" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-11" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">KDTree::findNearestNeighbor (3D), testing that left recursion does not include the root</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-11" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-12" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">KDTree constructor, 4D (Dim&#x3D;4)</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-12" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-13" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">KDTree::findNearestNeighbor (4D)</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-13" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+      </div>
+      <hr>
+      <div class="text-muted">
+        Generated for <strong>xingyuf2</strong>, using r<strong>38225</strong> (<strong>November 4th 2017, 2:00:00 am</strong>)
+      </div>
+    </div>
+  </body>
+
+</html>
