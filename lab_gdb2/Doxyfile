@@ -1,0 +1,4 @@
+@INCLUDE        = ../doxygen/doxygen.conf
+PROJECT_NAME    = "LAB_GDB2"
+PROJECT_BRIEF   = "Skip Lists"
+EXTRACT_PRIVATE = YES
