@@ -1,0 +1,253 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grade Feedback</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <style>
+    .pl-external-grader-results .panel-heading {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .pl-external-grader-results .panel-heading .panel-heading-left {
+      flex: 1;
+      align-self: left;
+    }
+
+    .pl-external-grader-results .panel-heading .panel-heading-right {
+      align-self: right;
+    }
+
+    .pl-external-grader-results .panel-heading .panel-heading-right .glyphicon.glyphicon-chevron-down {
+      transition: all 400ms;
+    }
+
+    .pl-external-grader-results .panel-heading:not(.collapsed) .panel-heading-right .glyphicon.glyphicon-chevron-down {
+      transform: rotateX(180deg);
+    }
+
+    .pl-external-grader-results pre.terminal-output {
+      background: black;
+      white-space: pre-wrap;
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-height: 200px;
+    }
+
+    .pl-external-grader-results pre.terminal-output > code {
+      color: white;
+      font-family: monospace;
+    }
+
+    .pl-external-grader-results pre.terminal-output.termial-output-question-panel {
+      margin: 0px;
+      border-radius: 0px;
+    }  
+    </style>
+
+
+
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="pl-external-grader-results">
+
+
+          <h3>Score:
+            <span style="color: hsla(211, 58%, 26%, 1)">
+              <strong>4/5 (80.00%)</strong>
+            </span>
+          </h3>
+
+          <h3>Test Results</h3>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-0" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[0/0]</strong></span>
+                      <span style="margin-left: 5px;">Output from &#x60;make&#x60;</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-0" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 0</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 0</li>
+                      <li class="list-group-item">
+                        <div><strong>Output</strong></div>
+                        <pre style="background: black; white-space: pre-wrap; overflow-y: auto; overflow-x: hidden; max-height: 200px;"><code style="color: white; font-family: monospace;">clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -MMD -MP -c   -c -o tests/basic.o tests/basic.cpp
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -MMD -MP -c   -c -o exercises.o exercises.cpp
+clang++ tests/basic.o exercises.o -std&#x3D;c++1y -stdlib&#x3D;libc++ -lpng -lc++abi -lpthread -o test
+</code></pre>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-1" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">sumDigits</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-1" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-2" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">triangle</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-2" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-3" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-remove" aria-hidden="true" style="color: #F44336"></span>
+                      <span style="color: #F44336; margin-left: 5px;"><strong>[0/1]</strong></span>
+                      <span style="margin-left: 5px;">sum</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-3" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 0</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                      <li class="list-group-item">
+                        <div><strong>Output</strong></div>
+                        <pre style="background: black; white-space: pre-wrap; overflow-y: auto; overflow-x: hidden; max-height: 200px;"><code style="color: white; font-family: monospace;">Original: stack&lt;double&gt;::_ctor_count &#x3D;&#x3D; 0
+Expanded: 12 &#x3D;&#x3D; 0
+</code></pre>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-4" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">scramble 17</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-4" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-5" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">scramble 9</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-5" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-6" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[0/0]</strong></span>
+                      <span style="margin-left: 5px;">verifySame results</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-6" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 0</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 0</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-7" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[0/0]</strong></span>
+                      <span style="margin-left: 5px;">verifySame structures unmodified (EXTRA CREDIT)</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-7" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 0</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 0</li>
+                  </ul>
+                </div>
+              </div>
+      </div>
+      <hr>
+      <div class="text-muted">
+        Generated for <strong>xingyuf2</strong>, using r<strong>20060</strong> (<strong>October 2nd 2017, 2:00:00 am</strong>)
+      </div>
+    </div>
+  </body>
+
+</html>
