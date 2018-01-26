@@ -1,0 +1,503 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grade Feedback</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+    <style>
+    .pl-external-grader-results .panel-heading {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .pl-external-grader-results .panel-heading .panel-heading-left {
+      flex: 1;
+      align-self: left;
+    }
+
+    .pl-external-grader-results .panel-heading .panel-heading-right {
+      align-self: right;
+    }
+
+    .pl-external-grader-results .panel-heading .panel-heading-right .glyphicon.glyphicon-chevron-down {
+      transition: all 400ms;
+    }
+
+    .pl-external-grader-results .panel-heading:not(.collapsed) .panel-heading-right .glyphicon.glyphicon-chevron-down {
+      transform: rotateX(180deg);
+    }
+
+    .pl-external-grader-results pre.terminal-output {
+      background: black;
+      white-space: pre-wrap;
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-height: 200px;
+    }
+
+    .pl-external-grader-results pre.terminal-output > code {
+      color: white;
+      font-family: monospace;
+    }
+
+    .pl-external-grader-results pre.terminal-output.termial-output-question-panel {
+      margin: 0px;
+      border-radius: 0px;
+    }  
+    </style>
+
+
+
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="pl-external-grader-results">
+
+
+          <h3>Score:
+            <span style="color: hsla(211, 58%, 26%, 1)">
+              <strong>29/29 (100.00%)</strong>
+            </span>
+          </h3>
+
+          <h3>Test Results</h3>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-0" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[0/0]</strong></span>
+                      <span style="margin-left: 5px;">Output from &#x60;make&#x60;</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-0" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 0</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 0</li>
+                      <li class="list-group-item">
+                        <div><strong>Output</strong></div>
+                        <pre style="background: black; white-space: pre-wrap; overflow-y: auto; overflow-x: hidden; max-height: 200px;"><code style="color: white; font-family: monospace;">clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c Point.cpp -o Point.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c FloodFilledImage.cpp -o FloodFilledImage.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c Animation.cpp -o Animation.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c colorPicker/GridColorPicker.cpp -o colorPicker/GridColorPicker.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c colorPicker/MyColorPicker.cpp -o colorPicker/MyColorPicker.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c colorPicker/GradientColorPicker.cpp -o colorPicker/GradientColorPicker.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c colorPicker/RainbowColorPicker.cpp -o colorPicker/RainbowColorPicker.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c colorPicker/SolidColorPicker.cpp -o colorPicker/SolidColorPicker.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c imageTraversal/ImageTraversal.cpp -o imageTraversal/ImageTraversal.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c imageTraversal/BFS.cpp -o imageTraversal/BFS.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c imageTraversal/DFS.cpp -o imageTraversal/DFS.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c cs225/HSLAPixel.cpp -o cs225/HSLAPixel.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c cs225/PNG.cpp -o cs225/PNG.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c cs225/lodepng/lodepng.cpp -o cs225/lodepng/lodepng.o
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c   -c -o tests/tests_part1_ec.o tests/tests_part1_ec.cpp
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c   -c -o tests/tests_part1.o tests/tests_part1.cpp
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c   -c -o tests/tests_part2.o tests/tests_part2.cpp
+clang++ -std&#x3D;c++1y -stdlib&#x3D;libc++ -g -O0 -pedantic -Wall -Werror -Wfatal-errors -Wextra -Wno-unused-parameter -Wno-unused-variable -c   -c -o tests/testmain.o tests/testmain.cpp
+clang++ Point.o FloodFilledImage.o Animation.o colorPicker/GridColorPicker.o colorPicker/MyColorPicker.o colorPicker/GradientColorPicker.o colorPicker/RainbowColorPicker.o colorPicker/SolidColorPicker.o imageTraversal/ImageTraversal.o imageTraversal/BFS.o imageTraversal/DFS.o cs225/HSLAPixel.o cs225/PNG.o cs225/lodepng/lodepng.o tests/tests_part1_ec.o tests/tests_part1.o tests/tests_part2.o tests/testmain.o -std&#x3D;c++1y -stdlib&#x3D;libc++ -lc++abi -lpthread -o test
+</code></pre>
+                      </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-1" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">DFS visits all points within a tolerance (larger image)</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-1" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-2" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">BFS visits all points within a tolerance (larger image)</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-2" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-3" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">DFS iterator visits all points in the correct order (larger image)</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-3" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-4" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">BFS iterator visits all points in the correct order (larger image)</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-4" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-5" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">DFS iterator starts at the start point</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-5" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-6" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">DFS visits the right pixel first</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-6" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-7" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">BFS iterator starts at the start point</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-7" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-8" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">BFS visits the right pixel first</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-8" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-9" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">DFS visits all points within a tolerance</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-9" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-10" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">BFS visits all points within a tolerance</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-10" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-11" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">DFS visits all points within a tolerance (includes pixels on image edge)</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-11" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-12" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">BFS visits all points within a tolerance (includes pixels on image edge)</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-12" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-13" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">DFS iterator visits all points in the correct order</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-13" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-14" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[1/1]</strong></span>
+                      <span style="margin-left: 5px;">BFS iterator visits all points in the correct order</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-14" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 1</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 1</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-15" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[3/3]</strong></span>
+                      <span style="margin-left: 5px;">Illini I - FloodFilledImage, DFS</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-15" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 3</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 3</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-16" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[3/3]</strong></span>
+                      <span style="margin-left: 5px;">Illini I - FloodFilledImage, BFS</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-16" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 3</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 3</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-17" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[3/3]</strong></span>
+                      <span style="margin-left: 5px;">Garfield - FloodFilledImage, BFS</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-17" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 3</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 3</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-18" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[3/3]</strong></span>
+                      <span style="margin-left: 5px;">PacMan - FloodFilledImage, DFS</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-18" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 3</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 3</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading collapsed" data-toggle="collapse" data-target="#panel-19" style="cursor: pointer;">
+                  <div class="panel-heading-left">
+                    <h4 class="panel-title">
+                      <span class="glyphicon glyphicon-ok" aria-hidden="true" style="color: #4CAF50"></span>
+                      <span style="color: #4CAF50; margin-left: 5px;"><strong>[3/3]</strong></span>
+                      <span style="margin-left: 5px;">PacMan - FloodFilledImage, BFS</span>
+                    </h4>
+                  </div>
+                  <div class="panel-heading-right">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                  </div>
+                </div>
+                <div id="panel-19" class="panel-collapse collapse">
+                  <ul class="list-group">
+                    <li class="list-group-item"><strong>Max points:</strong> 3</li>
+                    <li class="list-group-item"><strong>Earned points:</strong> 3</li>
+                  </ul>
+                </div>
+              </div>
+      </div>
+      <hr>
+      <div class="text-muted">
+        Generated for <strong>xingyuf2</strong>, using r<strong>29462</strong> (<strong>October 20th 2017, 2:00:00 am</strong>)
+      </div>
+    </div>
+  </body>
+
+</html>
